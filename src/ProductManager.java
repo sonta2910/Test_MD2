@@ -137,7 +137,7 @@ public class ProductManager {
                         do {
                             System.out.println("Enter new name of product:");
                             name = scanner.nextLine();
-                            if (name.equals("")) {
+                            if (!(name.equals(""))) {
                                 e.setName(name);
                                 frag = true;
                             }
@@ -233,7 +233,7 @@ public class ProductManager {
         try {
             FileReader fileReader = new FileReader(path);
             BufferedReader br = new BufferedReader(fileReader);
-            String a = "";
+            String a="";
             while ((a = br.readLine()) != null) {
                 String[] b = a.split(";");
                 String name = b[1];
